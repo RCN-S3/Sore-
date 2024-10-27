@@ -1,0 +1,164 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0d0d2b, #1b1b44, #2b2b6b); /* Deep space gradient */
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Galaxy background with stars and nebula effects */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0) 70%), /* Star cluster */
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 60%), /* Another cluster */
+                radial-gradient(ellipse at 50% 50%, #3a0ca3, #9d4edd 40%, rgba(157, 78, 221, 0.1) 70%); /* Nebula effect */
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none; /* Keeps this purely decorative */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensures content is above the background effects */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(28, 28, 60, 0.9); /* Slightly transparent space-blue */
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 2.8em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 15px #ff77e9; /* Soft glow */
+}
+
+/* View Counter */
+#viewCounter {
+    font-size: 1.2em;
+    color: #ffe74c;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    background: linear-gradient(45deg, #6a00f4, #ff477e); /* Vibrant purple to pink gradient */
+    color: #ffffff;
+    padding: 50px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Countdown */
+.countdown {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Sections */
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    background-color: rgba(30, 30, 60, 0.9); /* Deep transparent blue */
+    border: 2px solid #9d4edd; /* Neon purple border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 87, 221, 0.7); /* Glowing purple hover */
+}
+
+.section h2 {
+    color: #ff77e9;
+    text-shadow: 0 0 5px #ff77e9;
+}
+
+/* Dropdown Styles */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+    background-color: #2a2a5a;
+    color: white;
+}
+
+select:hover {
+    border-color: #ff6bdc;
+}
+
+/* Buy Button */
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 15px;
+}
+
+.buy-btn:hover {
+    background-color: #23d438;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.4);
+}
+
+/* Cart Section */
+.cart {
+    background-color: rgba(30, 30, 60, 0.9); /* Deep transparent blue */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 15px;
+}
+
+.checkout-btn:hover {
+    background-color: #0069d9;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+}

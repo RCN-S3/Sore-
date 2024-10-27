@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCN Minecraft Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Settings Tab -->
+    <div class="settings-tab" onclick="toggleTheme()">⚙️ Settings</div>
+
+    <div class="container">
+        <header>
+            <div class="logo">🌟 RCN Minecraft Store 🌟 [ Site in development ]</div>
+            <div id="viewCounter">👁️ <span id="views">0</span></div>
+        </header>
+
+        <div class="banner">
+            <h1>Welcome to RCN Minecraft Store</h1>
+            <h2 class="release-title">Countdown to Release:</h2>
+            <div class="countdown" id="countdownTimer"></div>
+            <h3>Until Release Date:</h3>
+            <div class="countdown" id="countdownToRelease"></div>
+        </div>
+
+        <div class="sections-container">
+            <div class="section" id="ranks">
+                <h2>Ranks 🔰 [ NOT DONE ]</h2>
+                <p>Ranks to get tons of rewards :D</p>
+                <label for="rankDropdown">Choose a Rank:</label>
+                <select id="rankDropdown">
+                    <option value="">Select a rank</option>
+                    <option value="Gold Rank 🟡" class="gold">Gold Rank 🟡</option>
+                    <option value="Diamond Rank 🔵" class="diamond">Diamond Rank 🔵</option>
+                    <option value="Emerald Rank 💚" class="emerald">Emerald Rank 💚</option>
+                    <option value="Immortal Rank 🌟" class="immortal">Immortal Rank 🌟</option>
+                    <option value="Mystical Rank 🌌" class="mystical">Mystical Rank 🌌</option>
+                    <option value="Mythic Rank 🏆" class="mythic">Mythic Rank 🏆</option>
+                </select>
+                <button class="buy-btn">Buy</button>
+            </div>
+
+            <div class="section" id="keys">
+                <h2>Keys 🔑 [ NOT DONE ]</h2>
+                <p>Unlock special crates!</p>
+                <label for="keyDropdown">Choose Number of Keys:</label>
+                <select id="keyDropdown">
+                    <option value="">Select keys</option>
+                    <option value="Buy 5 Keys">Buy 5 Keys</option>
+                    <option value="Buy 10 Keys">Buy 10 Keys</option>
+                    <option value="Buy 20 Keys">Buy 20 Keys</option>
+                </select>
+                <button class="buy-btn">Buy</button>
+            </div>
+
+            <div class="section" id="gems">
+                <h2>Gems 💎 [ NOT DONE ]</h2>
+                <p>Get gems to get rewards in game!</p>
+                <label for="gemDropdown">Choose Number of Gems:</label>
+                <select id="gemDropdown">
+                    <option value="">Select gems</option>
+                    <option value="Buy 100 Gems">Buy 100 Gems</option>
+                    <option value="Buy 500 Gems">Buy 500 Gems</option>
+                    <option value="Buy 1000 Gems">Buy 1000 Gems</option>
+                </select>
+                <button class="buy-btn">Buy</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Your Shopping Cart 🛒</h2>
+            <ul id="cartItems"></ul>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+
+        <div class="blog">
+            <h2></h2>
+            <ul id="updateList">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
